@@ -40,6 +40,7 @@ public class Latihan1 extends javax.swing.JFrame {
         nama1 = new javax.swing.JTextField();
         kelas1 = new javax.swing.JTextField();
         alamat1 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -112,7 +113,11 @@ public class Latihan1 extends javax.swing.JFrame {
         getContentPane().add(alamat1);
         alamat1.setBounds(110, 260, 170, 30);
 
-        setBounds(0, 0, 416, 339);
+        jPanel1.setBackground(new java.awt.Color(102, 204, 0));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(-10, -10, 410, 340);
+
+        setBounds(0, 0, 416, 365);
     }// </editor-fold>//GEN-END:initComponents
 
     private void NamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaActionPerformed
@@ -180,6 +185,7 @@ public class Latihan1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField kelas1;
     private javax.swing.JTextField nama1;
     private javax.swing.JButton proses;

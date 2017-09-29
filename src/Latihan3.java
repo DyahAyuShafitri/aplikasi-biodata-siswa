@@ -32,13 +32,14 @@ public class Latihan3 extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         Bilangan1 = new javax.swing.JTextField();
         Bil2 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         Kali = new javax.swing.JButton();
         Bagi = new javax.swing.JButton();
         Tambah = new javax.swing.JButton();
         Kurang = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         Hasil = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
@@ -63,11 +64,6 @@ public class Latihan3 extends javax.swing.JFrame {
         Bilangan1.setBounds(120, 60, 170, 30);
         getContentPane().add(Bil2);
         Bil2.setBounds(120, 100, 170, 30);
-
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel5.setText("Operator");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(160, 150, 70, 17);
 
         Kali.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         Kali.setText("X");
@@ -114,7 +110,18 @@ public class Latihan3 extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(190, 220, 60, 30);
         getContentPane().add(Hasil);
-        Hasil.setBounds(90, 250, 230, 60);
+        Hasil.setBounds(140, 250, 140, 60);
+
+        jPanel1.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel1.setLayout(null);
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel5.setText("Operator");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(170, 140, 70, 17);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 400, 320);
 
         setBounds(0, 0, 416, 359);
     }// </editor-fold>//GEN-END:initComponents
@@ -200,5 +207,6 @@ public class Latihan3 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

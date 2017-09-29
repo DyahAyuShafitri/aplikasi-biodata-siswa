@@ -47,6 +47,7 @@ public class Latihan4 extends javax.swing.JFrame {
         Hapus = new javax.swing.JButton();
         Exit = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -83,7 +84,7 @@ public class Latihan4 extends javax.swing.JFrame {
         buttonGroup9.add(tkj);
         tkj.setText("TKJ");
         getContentPane().add(tkj);
-        tkj.setBounds(180, 140, 110, 23);
+        tkj.setBounds(180, 140, 80, 23);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel5.setText("Hobi");
@@ -116,7 +117,7 @@ public class Latihan4 extends javax.swing.JFrame {
         jScrollPane1.setViewportView(TA);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 256, 310, 110);
+        jScrollPane1.setBounds(60, 256, 260, 110);
 
         Ok.setText("Submit");
         Ok.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +126,7 @@ public class Latihan4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Ok);
-        Ok.setBounds(60, 220, 65, 23);
+        Ok.setBounds(60, 220, 90, 23);
 
         Hapus.setText("Hapus");
         Hapus.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +135,7 @@ public class Latihan4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Hapus);
-        Hapus.setBounds(150, 220, 70, 23);
+        Hapus.setBounds(150, 220, 90, 23);
 
         Exit.setText("Exit");
         Exit.addActionListener(new java.awt.event.ActionListener() {
@@ -143,20 +144,26 @@ public class Latihan4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Exit);
-        Exit.setBounds(240, 220, 70, 23);
+        Exit.setBounds(240, 220, 80, 23);
 
         jPanel2.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel2.setLayout(null);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 410, Short.MAX_VALUE)
+        jPanel1.setBackground(new java.awt.Color(102, 204, 0));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 390, Short.MAX_VALUE)
         );
+
+        jPanel2.add(jPanel1);
+        jPanel1.setBounds(10, -10, 400, 390);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(-10, 0, 410, 380);
@@ -261,6 +268,7 @@ public class Latihan4 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JRadioButton rpl;

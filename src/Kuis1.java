@@ -35,9 +35,10 @@ public class Kuis1 extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         Nilai = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        OK = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TA = new javax.swing.JTextArea();
+        jPanel1 = new javax.swing.JPanel();
+        OK = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -77,23 +78,29 @@ public class Kuis1 extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(20, 180, 60, 17);
 
+        TA.setColumns(20);
+        TA.setRows(5);
+        jScrollPane1.setViewportView(TA);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(40, 250, 260, 130);
+
+        jPanel1.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel1.setLayout(null);
+
         OK.setText("Proses");
         OK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OKActionPerformed(evt);
             }
         });
-        getContentPane().add(OK);
-        OK.setBounds(140, 210, 110, 30);
+        jPanel1.add(OK);
+        OK.setBounds(130, 220, 110, 30);
 
-        TA.setColumns(20);
-        TA.setRows(5);
-        jScrollPane1.setViewportView(TA);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, -10, 350, 410);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(40, 250, 310, 130);
-
-        setBounds(0, 0, 406, 435);
+        setBounds(0, 0, 363, 435);
     }// </editor-fold>//GEN-END:initComponents
 
     private void OKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKActionPerformed
@@ -101,9 +108,23 @@ public class Kuis1 extends javax.swing.JFrame {
         String nama = Nama.getText();
         String absen = Absen.getText();
         String matpel = Matpel.getText();
-        String nilai = Nilai.getText();
+        int nilai = Integer.parseInt(Nilai.getText());
+        String KET_NILAI="";
         
-        TA.setText("Nama siswa:"+nama+"\nAbsen: "+absen+"\nMatpel: "+matpel+"\nNilai: "+nilai);
+        if((nilai>101)){
+            KET_NILAI = "Amazing";
+        }
+        if((nilai>99) && (nilai <102)){
+            KET_NILAI = "Sempurna";
+        }
+        if((nilai>74)&& (nilai <100)){
+            KET_NILAI = "Lulus";
+        }
+        if((nilai<75)){
+            KET_NILAI = "Tidak Lulus";
+        }
+        TA.setText("Nama siswa:"+nama+"\nAbsen: "+absen+"\nMatpel: "
+                +matpel+"\nNilai: "+nilai+"\nKeterangan : "+KET_NILAI);
     }//GEN-LAST:event_OKActionPerformed
 
     /**
@@ -153,6 +174,7 @@ public class Kuis1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -26,7 +26,6 @@ public class Latihan2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -35,17 +34,14 @@ public class Latihan2 extends javax.swing.JFrame {
         Absen = new javax.swing.JTextField();
         Kelas = new javax.swing.JTextField();
         Alamat = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TA = new javax.swing.JTextArea();
+        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText("FORMULIR");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 20, 80, 17);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel2.setText("Nama");
@@ -67,31 +63,44 @@ public class Latihan2 extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(20, 140, 60, 17);
         getContentPane().add(Nama);
-        Nama.setBounds(90, 50, 230, 30);
+        Nama.setBounds(90, 50, 160, 30);
         getContentPane().add(Absen);
-        Absen.setBounds(90, 80, 230, 30);
+        Absen.setBounds(90, 80, 160, 30);
         getContentPane().add(Kelas);
-        Kelas.setBounds(90, 110, 230, 30);
+        Kelas.setBounds(90, 110, 160, 30);
         getContentPane().add(Alamat);
-        Alamat.setBounds(90, 140, 230, 30);
-
-        jButton1.setText("OKE");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(150, 180, 100, 30);
+        Alamat.setBounds(90, 140, 160, 30);
 
         TA.setColumns(20);
         TA.setRows(5);
         jScrollPane1.setViewportView(TA);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 230, 290, 100);
+        jScrollPane1.setBounds(60, 230, 210, 100);
 
-        setBounds(0, 0, 416, 389);
+        jPanel1.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel1.setLayout(null);
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
+        jButton1.setText("OKE");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(130, 190, 60, 30);
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setText("FORMULIR");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(130, 30, 80, 17);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, -10, 410, 360);
+
+        setBounds(0, 0, 360, 389);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -151,6 +160,7 @@ public class Latihan2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

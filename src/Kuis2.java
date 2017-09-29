@@ -29,19 +29,20 @@ public class Kuis2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         bar1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         bar2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         bar3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         bar4 = new javax.swing.JTextField();
+        dis = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         OK = new javax.swing.JButton();
         Hps = new javax.swing.JButton();
         Exit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TA = new javax.swing.JTextArea();
-        jLabel6 = new javax.swing.JLabel();
-        dis = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -58,32 +59,42 @@ public class Kuis2 extends javax.swing.JFrame {
         getContentPane().add(bar1);
         bar1.setBounds(120, 50, 160, 30);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel3.setText("Harga Barang 2");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 100, 90, 20);
-        getContentPane().add(bar2);
-        bar2.setBounds(120, 100, 160, 30);
-
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel4.setText("Harga Barang 3");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 140, 100, 30);
-        getContentPane().add(bar3);
-        bar3.setBounds(120, 140, 160, 30);
-
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel5.setText("Harga Barang 4");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 190, 90, 20);
+        jPanel1.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel1.setLayout(null);
+        jPanel1.add(bar2);
+        bar2.setBounds(120, 80, 160, 30);
+        jPanel1.add(bar3);
+        bar3.setBounds(120, 110, 160, 30);
 
         bar4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bar4ActionPerformed(evt);
             }
         });
-        getContentPane().add(bar4);
-        bar4.setBounds(120, 180, 160, 30);
+        jPanel1.add(bar4);
+        bar4.setBounds(120, 140, 160, 30);
+        jPanel1.add(dis);
+        dis.setBounds(120, 170, 160, 30);
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel3.setText("Harga Barang 2");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(30, 80, 90, 20);
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel4.setText("Harga Barang 3");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(30, 110, 100, 30);
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel5.setText("Harga Barang 4");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(30, 150, 90, 20);
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel6.setText("Diskon");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(40, 180, 70, 17);
 
         OK.setText("Proses");
         OK.addActionListener(new java.awt.event.ActionListener() {
@@ -91,8 +102,8 @@ public class Kuis2 extends javax.swing.JFrame {
                 OKActionPerformed(evt);
             }
         });
-        getContentPane().add(OK);
-        OK.setBounds(50, 260, 80, 23);
+        jPanel1.add(OK);
+        OK.setBounds(50, 220, 90, 23);
 
         Hps.setText("Hapus");
         Hps.addActionListener(new java.awt.event.ActionListener() {
@@ -100,8 +111,8 @@ public class Kuis2 extends javax.swing.JFrame {
                 HpsActionPerformed(evt);
             }
         });
-        getContentPane().add(Hps);
-        Hps.setBounds(150, 260, 80, 20);
+        jPanel1.add(Hps);
+        Hps.setBounds(150, 220, 90, 23);
 
         Exit.setText("Keluar");
         Exit.addActionListener(new java.awt.event.ActionListener() {
@@ -109,24 +120,20 @@ public class Kuis2 extends javax.swing.JFrame {
                 ExitActionPerformed(evt);
             }
         });
-        getContentPane().add(Exit);
-        Exit.setBounds(250, 260, 63, 23);
+        jPanel1.add(Exit);
+        Exit.setBounds(250, 220, 90, 23);
 
         TA.setColumns(20);
         TA.setRows(5);
         jScrollPane1.setViewportView(TA);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(30, 300, 330, 150);
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(80, 250, 240, 130);
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel6.setText("Diskon");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 230, 70, 17);
-        getContentPane().add(dis);
-        dis.setBounds(120, 220, 160, 30);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 380, 430);
 
-        setBounds(0, 0, 421, 509);
+        setBounds(0, 0, 372, 445);
     }// </editor-fold>//GEN-END:initComponents
 
     private void bar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bar4ActionPerformed
@@ -223,6 +230,7 @@ public class Kuis2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
